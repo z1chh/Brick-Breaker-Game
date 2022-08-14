@@ -13,6 +13,7 @@ Finally, simply write `bricks` to run the application and play the game.
 * Use the paddle to prevent the ball from falling, which costs a life
 * Press 'a' or 'A' to move the paddle to the left
 * Press 'd' or 'D' to move the paddle to the right
+* Use 50 points to activate a power-up
 
 ## Power-Ups
 Each brick that is broken awards points, and 50 points can be used to activate a power-up.
@@ -27,20 +28,20 @@ Power-Ups:
 * Laser (Press 2): shoots out a pixel-sized red laser out of the middle of the paddle, towards the top of the screen (destroys at most one brick)
 
 ## OpenGL and GLSL Cover Art
-The coverart.c file draws a scene that looks like my brick breaker game.
+The [coverart.c file](https://github.com/z1chh/Brick-Breaker-Game/blob/main/coverart.c) draws a scene that looks like my brick breaker game.
 
 ### Covert Art Runtime Environment
 I used PuTTY on my Windows PC to connect to open-gpus.cs.mcgill.ca on port 22 (SSH with enabled X11 forwarding).
 
 I then used the following command to get the right mesa GL version: `export MESA_GL_VERSION_OVERRIDE=3.3`.
 
-Then, to gcc the coverart.c file, I used the -lglut and -lGL options (with -o coverart).
+Then, to gcc the [coverart.c file](https://github.com/z1chh/Brick-Breaker-Game/blob/main/coverart.c), I used the -lglut and -lGL options (with -o coverart).
 
 ## Game Implementation
-The bricks.asm program interacts with the GPU to display the game, but also to interact (a ball collision is determined when it hits a non-black pixel - bricks are coloured and walls have fixed x- and y- coordinates on the screen).
+The [bricks.asm program](https://github.com/z1chh/Brick-Breaker-Game/blob/main/bricks.asm) interacts with the GPU to display the game, but also to interact (a ball collision is determined when it hits a non-black pixel - bricks are coloured and walls have fixed x- and y- coordinates on the screen).
 
 ### Main Loop
-The main contains an infinite loop that stops whenever the user wins or loses the game. It takes care of calling every method and checking for user input:
+The [main](https://github.com/z1chh/Brick-Breaker-Game/blob/main/bricks.asm#L439) contains an infinite loop that stops whenever the user wins or loses the game. It takes care of calling every method and checking for user input:
 * Moving the ball
 * Checking for user input (move the paddle or activate a power-up)
 * Checking for collisions (and act accordingly)
