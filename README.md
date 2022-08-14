@@ -28,13 +28,12 @@ Point Distribution:
 * Bricks in the top two rows: 5 points
 
 Power-Ups:
+* Long Paddle (Press 1): doubles the size of your paddle (500 iterations of the main loop)
+* Laser (Press 2): shoots out a pixel-sized red laser out of the middle of the paddle, towards the top of the screen (destroys at most one brick)
 
 <p align="center">
   <img src="power-ups.JPG" width="641" height="428">
 </p>
-
-* Long Paddle (Press 1): doubles the size of your paddle (500 iterations of the main loop)
-* Laser (Press 2): shoots out a pixel-sized red laser out of the middle of the paddle, towards the top of the screen (destroys at most one brick)
 
 ## OpenGL and GLSL Cover Art
 The [coverart.c file](https://github.com/z1chh/Brick-Breaker-Game/blob/main/coverart.c) draws a scene that looks like my brick breaker game.
