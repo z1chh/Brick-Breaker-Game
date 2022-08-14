@@ -30,7 +30,7 @@ Point Distribution:
 Power-Ups:
 
 <p align="center">
-  <img src="brick breaker power-ups.JPG" width="641" height="428">
+  <img src="power-ups.JPG" width="641" height="428">
 </p>
 
 * Long Paddle (Press 1): doubles the size of your paddle (500 iterations of the main loop)
