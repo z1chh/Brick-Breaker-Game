@@ -53,7 +53,7 @@ The ball is represented by drawing a pixel at its current location. Its movement
 
 A collision with the wall is determined when the ball reaches a corner (since the video mode is set to 13h, the x- and y-coordinates can easily be computed). Depending on the wall that the ball hit, the x- and/or y-velocities will be inverted.
 
-A collision with the paddle changes the direction depending on which section of the paddle the ball hit (see the [Paddle section down below](https://github.com/z1chh/Brick-Breaker-Game/edit/main/README.md#L38)).
+A collision with the paddle changes the direction depending on which section of the paddle the ball hit (see the [Paddle section down below](https://github.com/z1chh/Brick-Breaker-Game/edit/main/README.md#Paddle)).
 
 Losing the ball resets the ball at the initial position (as well as the paddle), and the program waits for user input before continuing the game. A life will be decreased as well. A ball is lost if its y-coordinate is greater than 199 (bottom of the screen = higher y-coordinate).
 
