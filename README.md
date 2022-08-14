@@ -41,14 +41,14 @@ Then, to gcc the [coverart.c file](https://github.com/z1chh/Brick-Breaker-Game/b
 The [bricks.asm program](https://github.com/z1chh/Brick-Breaker-Game/blob/main/bricks.asm) interacts with the GPU to display the game, but also to interact (a ball collision is determined when it hits a non-black pixel - bricks are coloured and walls have fixed x- and y- coordinates on the screen).
 
 ### Main Loop
-The [main](https://github.com/z1chh/Brick-Breaker-Game/blob/main/bricks.asm#L439) contains an infinite loop that stops whenever the user wins or loses the game. It takes care of calling every method and checking for user input:
+The [main](https://github.com/z1chh/Brick-Breaker-Game/blob/main/bricks.asm#L1081) contains an infinite loop that stops whenever the user wins or loses the game. It takes care of calling every method and checking for user input:
 * Moving the ball
 * Checking for user input (move the paddle or activate a power-up)
 * Checking for collisions (and act accordingly)
 * Reset a power-up if it is done (laser hits something or long paddle duration reached)
 
 ### Ball
-Global variables are used to keep track of the ball's x- and y-coordinates, as well as the x- and y-velocity.
+[Global variables](https://github.com/z1chh/Brick-Breaker-Game/blob/main/bricks.asm#L20) are used to keep track of the ball's x- and y-coordinates, as well as the x- and y-velocity.
 
 The ball is represented by drawing a pixel at its current location. Its movement is represented by setting the pixel at its current location back to black (background color), and drawing the white pixel at a new location, according to its x- and y-velocities.
 
@@ -59,7 +59,7 @@ A collision with the paddle changes the direction depending on which section of 
 Losing the ball resets the ball at the initial position (as well as the paddle), and the program waits for user input before continuing the game. A life will be decreased as well. A ball is lost if its y-coordinate is greater than 199 (bottom of the screen = higher y-coordinate).
 
 ### Paddle
-Global variables are used to keep track of the paddle's x-coordinate (left-end of the paddle) (the y-coordinate does not change - hardcoded) and its length (default is 32, power-up 1 changes it temporarily to 64).
+[Global variables](https://github.com/z1chh/Brick-Breaker-Game/blob/main/bricks.asm#L26) are used to keep track of the paddle's x-coordinate (left-end of the paddle) (the y-coordinate does not change - hardcoded) and its length (default is 32, power-up 1 changes it temporarily to 64).
 
 The drawPaddle method takes as input the x-coordinate of the paddle and its length. It then draws 3 rectangles and fills them with their own color.
 
@@ -71,9 +71,9 @@ Whenever the ball collides with a brick, the direction in which it returns depen
 When a brick is hit, it disappears, and points are awarded.
 
 ### Power-Ups
-The Long Paddle power-up has a global counter that keeps track of whether it is active or not, and for how long it has been active (when it is activated).
+The [Long Paddle](https://github.com/z1chh/Brick-Breaker-Game/blob/main/bricks.asm#L31) power-up has a global counter that keeps track of how long it has been active for.
 
-The Laser power-up has global variables to keep track of its x- and y-coordinates (velocity always goes up by 1 - 0 horizontally, so these values are hardcoded), and a counter that keeps track of whether it is active or not.
+The Laser power-up has [global variables](https://github.com/z1chh/Brick-Breaker-Game/blob/main/bricks.asm#L33) to keep track of its x- and y-coordinates (velocity always goes up by 1 - 0 horizontally, so these values are hardcoded), and a counter that keeps track of whether it is active or not.
 
-If the Laser is active, the drawPixel method is used (same as the one that draws the ball), but with a red pixel, until it hits the ceiling or a brick.
+If the Laser is active, the [drawPixel](https://github.com/z1chh/Brick-Breaker-Game/blob/main/bricks.asm#L44) method is used (same as the one that draws the ball), but with a red pixel, until it hits the ceiling or a brick.
 
