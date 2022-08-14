@@ -28,6 +28,11 @@ Point Distribution:
 * Bricks in the top two rows: 5 points
 
 Power-Ups:
+
+<p align="center">
+  <img src="brick breaker power-ups.JPG" width="641" height="428">
+</p>
+
 * Long Paddle (Press 1): doubles the size of your paddle (500 iterations of the main loop)
 * Laser (Press 2): shoots out a pixel-sized red laser out of the middle of the paddle, towards the top of the screen (destroys at most one brick)
 
