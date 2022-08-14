@@ -1,7 +1,7 @@
 # Brick-Breaker-Game
 
 <p align="center">
-  <img src="brick breaker.jpg" width="600" height="600">
+  <img src="brick breaker.JPG" width="600" height="600">
 </p>
 
 ## Setup
