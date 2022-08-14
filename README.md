@@ -1,5 +1,9 @@
 # Brick-Breaker-Game
 
+<p align="center">
+  <img src="brick breaker.jpg" width="600" height="600">
+</p>
+
 ## Setup
 I used DOSBox 0.74-3 to run my game.
 From within DOSBox, I first mounted my drive such that I'm in the same directory as the [bricks.asm file](https://github.com/z1chh/Brick-Breaker-Game/blob/main/bricks.asm) and the [UTIL_BR.OBJ file](https://github.com/z1chh/Brick-Breaker-Game/blob/main/UTIL_BR.OBJ).
